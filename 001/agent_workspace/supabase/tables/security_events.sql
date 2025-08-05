@@ -1,0 +1,21 @@
+CREATE TABLE security_events (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    event_type TEXT NOT NULL CHECK (event_type IN ('login_failure',
+    'suspicious_activity',
+    'api_abuse',
+    'unauthorized_access',
+    'device_change',
+    'privilege_escalation')),
+    severity TEXT NOT NULL CHECK (severity IN ('low',
+    'medium',
+    'high',
+    'critical')),
+    user_id UUID,
+    ip_address INET,
+    description TEXT,
+    details JSONB,
+    resolved BOOLEAN DEFAULT false,
+    resolved_by UUID,
+    resolved_at TIMESTAMPTZ,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);

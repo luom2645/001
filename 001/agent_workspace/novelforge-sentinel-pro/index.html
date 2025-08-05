@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovelForge Sentinel Pro - AI小说创作平台</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 左侧导航栏 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-cube logo-icon"></i>
+                    <span class="logo-text">NovelForge</span>
+                    <span class="logo-subtitle">Sentinel Pro</span>
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <div class="nav-item active" data-section="creation">
+                    <i class="fas fa-pen-nib"></i>
+                    <span>创作中心</span>
+                </div>
+                <div class="nav-item" data-section="projects">
+                    <i class="fas fa-folder-open"></i>
+                    <span>作品管理</span>
+                </div>
+                <div class="nav-item" data-section="ai-models">
+                    <i class="fas fa-brain"></i>
+                    <span>AI模型</span>
+                </div>
+                <div class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>系统设置</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="username">创作者</span>
+                        <span class="user-status">已认证</span>
+                    </div>
+                </div>
+                <div class="security-status">
+                    <div class="security-indicator active"></div>
+                    <span>设备已绑定</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 创作中心 -->
+            <section id="creation-section" class="content-section active">
+                <div class="section-header">
+                    <h1 class="section-title">
+                        <span class="title-glow">创作中心</span>
+                        <span class="title-subtitle">AI驱动的专业小说创作流程</span>
+                    </h1>
+                </div>
+
+                <!-- 项目创建区 -->
+                <div class="creation-grid">
+                    <div class="panel glass-panel project-creation">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-plus-circle"></i> 项目创建区</h2>
+                        </div>
+                        <div class="panel-content">
+                            <form class="creation-form">
+                                <div class="form-group">
+                                    <label>项目名称</label>
+                                    <input type="text" class="cyber-input" placeholder="请输入小说名称">
+                                </div>
+                                <div class="form-group">
+                                    <label>题材选择</label>
+                                    <select class="cyber-select">
+                                        <option>科幻小说</option>
+                                        <option>玄幻小说</option>
+                                        <option>都市小说</option>
+                                        <option>历史小说</option>
+                                        <option>悬疑小说</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>目标字数</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="cyber-slider" min="10000" max="1000000" value="100000">
+                                        <span class="slider-value">100,000 字</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>文风偏好</label>
+                                    <div class="style-options">
+                                        <button type="button" class="style-btn active">现代简约</button>
+                                        <button type="button" class="style-btn">古典雅致</button>
+                                        <button type="button" class="style-btn">激情澎湃</button>
+                                        <button type="button" class="style-btn">细腻温婉</button>
+                                    </div>
+                                </div>
+                                <button type="submit" class="cyber-btn primary">
+                                    <span>开始创作</span>
+                                    <i class="fas fa-rocket"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 专业创作流程区 -->
+                    <div class="panel glass-panel workflow-panel">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-stream"></i> 专业创作流程</h2>
+                            <div class="workflow-status">
+                                <span class="status-indicator waiting"></span>
+                                <span>等待启动</span>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="workflow-grid">
+                                <div class="workflow-item" data-status="waiting">
+                                    <div class="workflow-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <h3>世界观设定</h3>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="workflow-status">等待中</span>
+                                </div>
+                                <div class="workflow-item" data-status="waiting">
+                                    <div class="workflow-icon">
+                                        <i class="fas fa-map"></i>
+                                    </div>
+                                    <h3>故事大纲</h3>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="workflow-status">等待中</span>
+                                </div>
+                                <div class="workflow-item" data-status="waiting">
+                                    <div class="workflow-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>人物小传</h3>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="workflow-status">等待中</span>
+                                </div>
+                                <div class="workflow-item" data-status="waiting">
+                                    <div class="workflow-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <h3>风格指南</h3>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="workflow-status">等待中</span>
+                                </div>
+                                <div class="workflow-item" data-status="waiting">
+                                    <div class="workflow-icon">
+                                        <i class="fas fa-lightning-bolt"></i>
+                                    </div>
+                                    <h3>核心冲突</h3>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="workflow-status">等待中</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 资源管理区 -->
+                    <div class="panel glass-panel resource-panel">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-microchip"></i> 资源管理</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="resource-stats">
+                                <div class="stat-item">
+                                    <div class="stat-icon cpu"></div>
+                                    <div class="stat-info">
+                                        <span class="stat-label">CPU使用率</span>
+                                        <span class="stat-value">45%</span>
+                                    </div>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon memory"></div>
+                                    <div class="stat-info">
+                                        <span class="stat-label">内存使用</span>
+                                        <span class="stat-value">2.8GB / 8GB</span>
+                                    </div>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon threads"></div>
+                                    <div class="stat-info">
+                                        <span class="stat-label">推荐线程</span>
+                                        <span class="stat-value">8 线程</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI模型管理区 -->
+                    <div class="panel glass-panel ai-panel">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-robot"></i> AI模型状态</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="ai-models">
+                                <div class="ai-model" data-status="connected">
+                                    <div class="model-icon">
+                                        <i class="fab fa-openai"></i>
+                                    </div>
+                                    <div class="model-info">
+                                        <h3>GPT-4</h3>
+                                        <span class="model-status">已连接</span>
+                                    </div>
+                                    <div class="model-indicator connected"></div>
+                                </div>
+                                <div class="ai-model" data-status="connected">
+                                    <div class="model-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="model-info">
+                                        <h3>Claude</h3>
+                                        <span class="model-status">已连接</span>
+                                    </div>
+                                    <div class="model-indicator connected"></div>
+                                </div>
+                                <div class="ai-model" data-status="disconnected">
+                                    <div class="model-icon">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                    <div class="model-info">
+                                        <h3>Gemini</h3>
+                                        <span class="model-status">未配置</span>
+                                    </div>
+                                    <div class="model-indicator disconnected"></div>
+                                </div>
+                            </div>
+                            <button class="cyber-btn secondary manage-api-btn">
+                                <i class="fas fa-key"></i>
+                                <span>管理API密钥</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 作品管理 -->
+            <section id="projects-section" class="content-section">
+                <div class="section-header">
+                    <h1 class="section-title">
+                        <span class="title-glow">作品管理</span>
+                        <span class="title-subtitle">管理您的小说创作项目</span>
+                    </h1>
+                </div>
+
+                <div class="projects-container">
+                    <div class="panel glass-panel projects-list">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-book"></i> 我的作品</h2>
+                            <div class="search-container">
+                                <input type="text" class="cyber-input search-input" placeholder="搜索作品...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="projects-grid">
+                                <div class="project-card">
+                                    <div class="project-cover">
+                                        <img src="images/writing-space.jpg" alt="项目封面">
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>星际流浪者</h3>
+                                        <p class="project-genre">科幻小说</p>
+                                        <p class="project-progress">进度: 45,000 / 100,000 字</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 45%"></div>
+                                        </div>
+                                        <div class="project-meta">
+                                            <span class="last-edit">3天前</span>
+                                            <div class="quality-score">
+                                                <i class="fas fa-star"></i>
+                                                <span>8.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-actions">
+                                        <button class="action-btn">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-cover">
+                                        <img src="images/ai-neural.jpg" alt="项目封面">
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>都市修仙传</h3>
+                                        <p class="project-genre">玄幻小说</p>
+                                        <p class="project-progress">进度: 78,500 / 150,000 字</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 52%"></div>
+                                        </div>
+                                        <div class="project-meta">
+                                            <span class="last-edit">1天前</span>
+                                            <div class="quality-score">
+                                                <i class="fas fa-star"></i>
+                                                <span>9.2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-actions">
+                                        <button class="action-btn">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-cover">
+                                        <img src="images/data-flow.jpg" alt="项目封面">
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>时间的秘密</h3>
+                                        <p class="project-genre">悬疑小说</p>
+                                        <p class="project-progress">进度: 120,000 / 120,000 字</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill completed" style="width: 100%"></div>
+                                        </div>
+                                        <div class="project-meta">
+                                            <span class="last-edit">已完成</span>
+                                            <div class="quality-score">
+                                                <i class="fas fa-star"></i>
+                                                <span>9.7</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-actions">
+                                        <button class="action-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn">
+                                            <i class="fas fa-share"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI模型管理 -->
+            <section id="ai-models-section" class="content-section">
+                <div class="section-header">
+                    <h1 class="section-title">
+                        <span class="title-glow">AI模型管理</span>
+                        <span class="title-subtitle">配置和管理您的AI创作助手</span>
+                    </h1>
+                </div>
+
+                <div class="ai-management-container">
+                    <div class="panel glass-panel api-config">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-key"></i> API密钥配置</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="api-form">
+                                <div class="api-provider">
+                                    <div class="provider-header">
+                                        <div class="provider-icon">
+                                            <i class="fab fa-openai"></i>
+                                        </div>
+                                        <h3>OpenAI GPT</h3>
+                                        <div class="connection-status connected">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>已连接</span>
+                                        </div>
+                                    </div>
+                                    <div class="api-input-group">
+                                        <label>API Key</label>
+                                        <div class="input-with-button">
+                                            <input type="password" class="cyber-input" value="sk-***************************" readonly>
+                                            <button class="cyber-btn secondary">更新</button>
+                                        </div>
+                                    </div>
+                                    <div class="model-selector">
+                                        <label>模型选择</label>
+                                        <select class="cyber-select">
+                                            <option selected>gpt-4-turbo</option>
+                                            <option>gpt-4</option>
+                                            <option>gpt-3.5-turbo</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="api-provider">
+                                    <div class="provider-header">
+                                        <div class="provider-icon">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <h3>Anthropic Claude</h3>
+                                        <div class="connection-status connected">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>已连接</span>
+                                        </div>
+                                    </div>
+                                    <div class="api-input-group">
+                                        <label>API Key</label>
+                                        <div class="input-with-button">
+                                            <input type="password" class="cyber-input" value="sk-ant-***************************" readonly>
+                                            <button class="cyber-btn secondary">更新</button>
+                                        </div>
+                                    </div>
+                                    <div class="model-selector">
+                                        <label>模型选择</label>
+                                        <select class="cyber-select">
+                                            <option selected>claude-3-opus</option>
+                                            <option>claude-3-sonnet</option>
+                                            <option>claude-2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="api-provider">
+                                    <div class="provider-header">
+                                        <div class="provider-icon">
+                                            <i class="fab fa-google"></i>
+                                        </div>
+                                        <h3>Google Gemini</h3>
+                                        <div class="connection-status disconnected">
+                                            <i class="fas fa-times-circle"></i>
+                                            <span>未配置</span>
+                                        </div>
+                                    </div>
+                                    <div class="api-input-group">
+                                        <label>API Key</label>
+                                        <div class="input-with-button">
+                                            <input type="password" class="cyber-input" placeholder="请输入Gemini API Key">
+                                            <button class="cyber-btn primary">连接</button>
+                                        </div>
+                                    </div>
+                                    <div class="model-selector">
+                                        <label>模型选择</label>
+                                        <select class="cyber-select" disabled>
+                                            <option>gemini-pro</option>
+                                            <option>gemini-pro-vision</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel glass-panel model-performance">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-chart-line"></i> 模型性能监控</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="performance-grid">
+                                <div class="performance-card">
+                                    <h3>响应时间</h3>
+                                    <div class="metric-value">1.2s</div>
+                                    <div class="metric-trend up">
+                                        <i class="fas fa-arrow-up"></i>
+                                        <span>优化 15%</span>
+                                    </div>
+                                </div>
+                                <div class="performance-card">
+                                    <h3>API调用</h3>
+                                    <div class="metric-value">1,847</div>
+                                    <div class="metric-trend">
+                                        <span>本月</span>
+                                    </div>
+                                </div>
+                                <div class="performance-card">
+                                    <h3>成功率</h3>
+                                    <div class="metric-value">99.8%</div>
+                                    <div class="metric-trend up">
+                                        <i class="fas fa-check"></i>
+                                        <span>稳定</span>
+                                    </div>
+                                </div>
+                                <div class="performance-card">
+                                    <h3>费用统计</h3>
+                                    <div class="metric-value">¥128</div>
+                                    <div class="metric-trend">
+                                        <span>本月</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 系统设置 -->
+            <section id="settings-section" class="content-section">
+                <div class="section-header">
+                    <h1 class="section-title">
+                        <span class="title-glow">系统设置</span>
+                        <span class="title-subtitle">个性化您的创作环境</span>
+                    </h1>
+                </div>
+
+                <div class="settings-container">
+                    <div class="panel glass-panel general-settings">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-cog"></i> 通用设置</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>深色主题</h3>
+                                    <p>使用科幻风格的深色界面主题</p>
+                                </div>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>发光特效</h3>
+                                    <p>启用界面元素的霓虹发光效果</p>
+                                </div>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>动态背景</h3>
+                                    <p>启用数据流动画和粒子效果</p>
+                                </div>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>自动保存</h3>
+                                    <p>每5分钟自动保存创作进度</p>
+                                </div>
+                                <div class="toggle-switch active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel glass-panel security-settings">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-shield-alt"></i> 安全设置</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="security-info">
+                                <div class="device-binding">
+                                    <div class="binding-status">
+                                        <i class="fas fa-laptop"></i>
+                                        <div class="status-info">
+                                            <h3>设备绑定状态</h3>
+                                            <p>当前设备已安全绑定</p>
+                                            <span class="device-id">设备ID: NF-7X8K-9M2L-Q4R6</span>
+                                        </div>
+                                        <div class="status-indicator bound">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="security-actions">
+                                    <button class="cyber-btn secondary">
+                                        <i class="fas fa-sync"></i>
+                                        <span>刷新绑定</span>
+                                    </button>
+                                    <button class="cyber-btn danger">
+                                        <i class="fas fa-unlink"></i>
+                                        <span>解除绑定</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel glass-panel account-settings">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-user-circle"></i> 账户信息</h2>
+                        </div>
+                        <div class="panel-content">
+                            <div class="account-info">
+                                <div class="account-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="account-details">
+                                    <h3>创作者账户</h3>
+                                    <p>用户ID: NF000123456</p>
+                                    <p>注册时间: 2024-01-15</p>
+                                    <div class="subscription-status">
+                                        <span class="status-badge premium">专业版</span>
+                                        <span class="expire-date">有效期至: 2024-12-31</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-actions">
+                                <button class="cyber-btn secondary">
+                                    <i class="fas fa-edit"></i>
+                                    <span>编辑资料</span>
+                                </button>
+                                <button class="cyber-btn secondary">
+                                    <i class="fas fa-key"></i>
+                                    <span>修改密码</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 管理员入口 -->
+    <div class="admin-portal">
+        <button class="admin-btn" onclick="window.open('admin.html', '_blank')">
+            <i class="fas fa-shield-alt"></i>
+            <span>管理员控制台</span>
+        </button>
+    </div>
+
+    <!-- 背景动画元素 -->
+    <div class="bg-animation">
+        <div class="particles"></div>
+        <div class="neural-network"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
