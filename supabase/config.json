@@ -1,0 +1,111 @@
+{
+  "project": {
+    "name": "NovelForge Sentinel Pro",
+    "version": "1.0.0",
+    "description": "跨平台AI小说生成生态系统",
+    "author": "MiniMax Agent",
+    "license": "MIT"
+  },
+  "supabase": {
+    "functions": {
+      "admin-setup": {
+        "description": "管理员设置和初始化",
+        "auth_required": true,
+        "admin_only": true
+      },
+      "ai-proxy": {
+        "description": "AI模型代理服务",
+        "auth_required": true,
+        "rate_limit": "100/minute"
+      },
+      "device-verification": {
+        "description": "设备绑定和验证",
+        "auth_required": true,
+        "rate_limit": "10/minute"
+      },
+      "file-upload": {
+        "description": "文件上传服务",
+        "auth_required": true,
+        "max_file_size": "50MB"
+      },
+      "license-management": {
+        "description": "许可证管理",
+        "auth_required": true,
+        "admin_or_reseller_only": true
+      },
+      "security-monitoring": {
+        "description": "安全监控和事件记录",
+        "auth_required": true,
+        "admin_only": true
+      },
+      "security-scan-cron": {
+        "description": "定时安全扫描",
+        "scheduled": true,
+        "interval": "daily"
+      }
+    },
+    "storage": {
+      "buckets": {
+        "novel-documents": {
+          "public": false,
+          "allowed_mime_types": ["text/*", "application/pdf", "application/json"],
+          "file_size_limit": 52428800,
+          "security_policy": "user_folder_based"
+        },
+        "user-avatars": {
+          "public": true,
+          "allowed_mime_types": ["image/*"],
+          "file_size_limit": 5242880,
+          "security_policy": "public_read_user_write"
+        }
+      }
+    },
+    "database": {
+      "tables": [
+        "profiles",
+        "licenses", 
+        "device_bindings",
+        "novels",
+        "audit_logs",
+        "security_events",
+        "system_notifications",
+        "ai_usage_logs"
+      ],
+      "features": {
+        "rls_enabled": true,
+        "multi_level_permissions": true,
+        "audit_logging": true
+      }
+    }
+  },
+  "security": {
+    "encryption": "TLS 1.3",
+    "device_binding": true,
+    "multi_level_permissions": {
+      "admin": "Full system access",
+      "reseller": "Limited admin access for license management",
+      "user": "Basic user access to own resources"
+    },
+    "session_timeout": 3600,
+    "max_failed_logins": 5
+  },
+  "ai_models": {
+    "supported_providers": ["openai", "anthropic", "google"],
+    "default_provider": "openai",
+    "rate_limits": {
+      "requests_per_minute": 60,
+      "tokens_per_hour": 50000
+    }
+  },
+  "client": {
+    "planned_platforms": ["Windows", "macOS", "Linux"],
+    "technology": "Flutter Desktop",
+    "ui_theme": "Sci-Fi/Cyberpunk",
+    "features": [
+      "Offline novel editing",
+      "Real-time AI assistance", 
+      "Multi-project management",
+      "Advanced security controls"
+    ]
+  }
+}

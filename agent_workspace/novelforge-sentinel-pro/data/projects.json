@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": "NF001",
+      "title": "星际流浪者",
+      "genre": "科幻小说",
+      "currentWords": 45000,
+      "targetWords": 100000,
+      "progress": 45,
+      "lastEdit": "3天前",
+      "qualityScore": 8.5,
+      "status": "进行中",
+      "cover": "images/writing-space.jpg",
+      "description": "一个关于未来星际移民的史诗故事，探讨人类在宇宙中的归属与命运。"
+    },
+    {
+      "id": "NF002",
+      "title": "都市修仙传",
+      "genre": "玄幻小说",
+      "currentWords": 78500,
+      "targetWords": 150000,
+      "progress": 52,
+      "lastEdit": "1天前",
+      "qualityScore": 9.2,
+      "status": "进行中",
+      "cover": "images/ai-neural.jpg",
+      "description": "现代都市与修仙世界的完美融合，主角在钢筋水泥中追寻仙道。"
+    },
+    {
+      "id": "NF003",
+      "title": "时间的秘密",
+      "genre": "悬疑小说",
+      "currentWords": 120000,
+      "targetWords": 120000,
+      "progress": 100,
+      "lastEdit": "已完成",
+      "qualityScore": 9.7,
+      "status": "已完成",
+      "cover": "images/data-flow.jpg",
+      "description": "一个穿越时空的悬疑故事，揭示时间旅行背后的惊天阴谋。"
+    }
+  ],
+  "stats": {
+    "totalProjects": 3,
+    "completedProjects": 1,
+    "totalWords": 243500,
+    "averageQuality": 9.1
+  }
+}

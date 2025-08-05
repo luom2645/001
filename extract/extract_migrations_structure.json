@@ -1,0 +1,1 @@
+{"extracted_information": {"directory_path": "agent_workspace/supabase/migrations", "files": ["1754354212_setup_indexes_and_rls.sql", "1754354231_create_rls_policies.sql", "1754354248_create_audit_triggers.sql"], "subdirectories": []}, "specifications": {}, "pricing": {}, "features": [], "statistics": {}, "temporal_info": {}, "geographical_data": {}, "references": []}

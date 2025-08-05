@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-08-06",
+  "project_name": "NovelForge Sentinel Pro",
+  "total_checks": 65,
+  "successful_checks": 65,
+  "success_rate": "100.0%",
+  "errors": [],
+  "warnings": [
+    "安全风险: create-bucket-novel-documents-temp 原始文件仍包含不安全配置",
+    "安全风险: create-bucket-user-avatars-temp 原始文件仍包含不安全配置"
+  ],
+  "status": "PASS"
+}
